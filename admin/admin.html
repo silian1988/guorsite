@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link href="../static/ui/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../static/ui/bootstrap/css/prettify.css" rel="stylesheet">
+  <link href="../static/ui/css/flat-ui.css" rel="stylesheet">
+  <link href="../static/ui/css/docs.css" rel="stylesheet">
+  <link href="../static/css/fineuploader.min.css" rel="stylesheet">
+  <!--link href="../static/css/fineuploader-custom.css" rel="stylesheet"--!>
+  <link href="../static/css/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <!--link href="../static/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"--!>
+  <link href="../static/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../static/editor/redactor/redactor.css" />
+
+
+  <!--[if lt IE 9]>
+      <script src="../static/ui/js/html5shiv.js"></script>
+      <script src="../static/ui/js/respond.min.js"></script>
+    <![endif]-->
+ <title>后台管理</title>
+</head>
+<body>
+  <div id="header_top">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="#">guor.cc</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav">
+                <li class="active">
+                    <div class="dropdown">
+                           <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">产品<span class="caret"></span></button>
+                           <span class="dropdown-arrow dropdown-arrow-inverse"></span>
+                           <ul class="dropdown-menu dropdown-inverse">
+                              <li><a href="#fakelink">裤子</a></li>
+                              <li><a href="#fakelink">裙子</a></li>
+                              <li><a href="#fakelink">外衣</a></li>
+                              <li><a href="#fakelink">包包</a></li>
+                              <li><a href="#fakelink">鞋子</a></li>
+                              <li><a href="#fakelink">配件</a></li>
+                            </u>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">联系方式<span class="caret"></span></button>
+                        <span class="dropdown-arrow dropdown-arrow-inverse"></span>
+                        <ul class="dropdown-menu dropdown-inverse">
+                            <li class="self_color"><img src="../static/img/boss_weixin.jpg" width=150px height=150px /></li>
+                            <li class="self_color">微信号：TM148999</li>
+                        </u>
+                    </div>
+
+                </li>
+               </ul>
+              <form class="navbar-form navbar-right" action="#" role="search" style="width: 250px">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" id="navbarInput-01" type="search" placeholder="搜索">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn"><span class="fui-search"></span></button>
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </div><!-- /.navbar-collapse -->
+          </nav>
+  </div>
+ <section id="wrapper">
+  <aside id="aside" role="complementary">
+    <nav role="navigation">
+      <ul class="nav-vertical">
+        <li class="nav-group-title">货品</li>
+        <li class="active"><a href="#"><i class="fa fa-fw fa-truck"></i>货品发布</a></li>
+        <li><a href="#"><i class="fa fa-fw fa-cogs"></i>货品管理</a></li>
+    </ul>
+  </nav>
+  </aside>
+  <main id="main" role="main">
+   <div class="inner_main">
+    <header class="page-header">
+      <h4><i class="fa fa-truck"></i>货品发布</h4>
+    </header>
+
+    <form accept-charset="UTF-8" action="/things" class="simple_form thing_form form-horizontal" id="new_thing" method="post">
+    <div class="form-group string required thing_title">
+      <label class="string required control-label" for="thing_title">
+      <abbr title="必需">*</abbr> 名称</label>
+      <div class="controls">
+         <input aria-required="true" class="string required form-control" id="thing_title" maxlength="20" name="thing[title]" placeholder="品牌型号，20字以内" required="required" size="20" type="text">
+      </div>
+    </div>
+
+
+  <div class="form-group string required thing_title">
+    <label class="string required control-label" for="thing_title">
+    <abbr title="必需">*</abbr> 类别</label>
+    <input name="tagsinput" class="tagsinput" value="包包,鞋子,裤子,外衣" />
+  </div>
+
+    <div class="form-group string optional thing_subtitle">
+      <label class="string optional control-label" for="thing_subtitle">介绍</label>
+      <div class="controls">
+         <input class="string optional form-control" id="thing_subtitle" maxlength="40" name="thing[subtitle]" placeholder="您对产品的一句话介绍，40字以内" size="40" type="text" value="">
+      </div>
+    </div>
+   <!-- Fine Uploader DOM Element======================================================= -->
+    <div id="thumbnail-fine-uploader"></div>
+
+    <!-- Fine Uploader template========================================================= -->
+    <script type="text/template" id="qq-simple-thumbnails-template">
+      <div class="qq-uploader-selector qq-uploader">
+      <label class="string required control-label" for="thing_title">
+       <abbr title="必需">* </abbr></label>
+       <button class="qq-upload-button-selector qq-upload-button btn btn-success">
+          <div>上传图片</div>
+        </button>
+        <span class="qq-drop-processing-selector qq-drop-processing">
+          <span>处理上传文件...</span>
+          <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+        </span>
+        <ul class="qq-upload-list-selector qq-upload-list">
+          <li>
+            <div class="qq-progress-bar-container-selector">
+              <div class="qq-progress-bar-selector qq-progress-bar"></div>
+            </div>
+            <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+            <img class="qq-thumbnail-selector" qq-max-size="70" qq-server-scale>
+            <span class="qq-edit-filename-icon-selector qq-edit-filename-icon"></span>
+            <span class="qq-upload-file-selector qq-upload-file"></span>
+            <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+            <span class="qq-upload-size-selector qq-upload-size"></span>
+            <a class="qq-upload-cancel-selector qq-upload-cancel" href="#">取消</a>
+            <a class="qq-upload-retry-selector qq-upload-retry" href="#">重试</a>
+            <a class="qq-upload-delete-selector qq-upload-delete" href="#">删除</a>
+            <span class="qq-upload-status-text-selector qq-upload-status-text"></span>
+          </li>
+        </ul>
+      </div>
+    </script>
+    <div id="editor-page">
+	<textarea id="redactor_content" name="content">
+	</textarea>
+  <button class="qq-upload-button-selector qq-upload-button btn btn-success">
+          <div>提 交</div>
+  </button>
+
+  </div>
+  </main>
+ </section>
+  <script src="../static/ui/js/jquery-1.9.0.min.js"></script>
+  <script src="../static/ui/js/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="../static/ui/js/jquery.ui.touch-punch.min.js"></script>
+  <script src="../static/ui/js/bootstrap.min.js"></script>
+  <script src="../static/ui/js/bootstrap-select.js"></script>
+  <script src="../static/ui/js/bootstrap-switch.js"></script>
+  <script src="../static/ui/js/flatui-checkbox.js"></script>
+  <script src="../static/ui/js/flatui-radio.js"></script>
+  <script src="../static/ui/js/jquery.tagsinput.js"></script>
+  <script src="../static/ui/js/jquery.placeholder.js"></script>
+  <script src="http://vjs.zencdn.net/4.3/video.js"></script>
+  <script src="../static/ui/js/application.js"></script>
+  <script src="../static/js/external/jquery.hotkeys.js"></script>
+  <script src="../static/js/external/google-code-prettify/prettify.js"></script>
+  <script src="../static/js/fineuploader.min.js"></script>
+	<script src="../static/editor/redactor/redactor.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#thumbnail-fine-uploader').fineUploader({
+      template: "qq-simple-thumbnails-template",
+      thumbnails: {
+          placeholders: {
+            waitingPath: "../static/css/font-awesome/assets/waiting-generic.png",
+            notAvailablePath: "../static/css/font-awesome/assets/not_available-generic.png"
+          }
+      },
+      request: {
+        endpoint: 'server/handleUploads'
+      },
+      validation: {
+          allowedExtensions: ['jpeg', 'jpg', 'gif', 'png']
+      }
+    });
+  });
+  $(document).ready(
+      function()
+      {
+        $('#redactor_content').redactor({
+          imageUpload: '../static/editor/demo/scripts/image_upload.php',
+          fileUpload: '../static/editor/demo/scripts/file_upload.php',
+          imageGetJson: '../static/editor/demo/json/data.json'
+        });
+      }
+    );
+</script>
+</body>
+</html>

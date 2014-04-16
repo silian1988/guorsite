@@ -1,0 +1,944 @@
+/* Body and structure
+-------------------------------------------------- */
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+body
+{
+    height: auto !important;
+    padding-bottom: 260px;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 14px;
+    background-color:#FEFEFC;
+    color:#525252 !important;
+    margin: 50px 0 0;
+}
+.container
+{
+    width: 75%;
+}
+h4, h5, h6
+{
+    color: #00abc7;
+    font-weight: 300;
+}
+
+/* Header
+-------------------------------------------------- */
+.header
+{
+    vertical-align: bottom;
+}
+
+.version-number
+{
+    font-size: 90px;
+    font-weight: bold;
+    position: relative;
+    top: 9px;
+}
+.nav-logo
+{
+    padding: 7px 15px 10px !important;
+}
+.nav-logo img
+{
+    height: 22px;
+}
+#navbar
+{
+    width: 100%;
+    float:left;
+}
+.navbar
+{
+    margin-bottom:0;
+}
+
+/* Main Nav */
+.fixed
+{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1) !important;
+}
+.main-nav
+{
+    margin-left: -35px;
+}
+.main-nav .navbar-inner
+{
+    background:transparent !important;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled=false); /*IE remove bootstrap filter */
+    background-image:none;
+    border:none;
+    box-shadow:none;
+}
+.main-nav .navbar .nav > li > a
+{
+    font-size:13px;
+    color:#FFFFFF;
+    text-shadow:none;
+}
+.main-nav .navbar .nav > li > a:hover
+{
+    color:#FFFFFF;
+    background-color: #66ccdd;
+}
+.main-nav .navbar .nav .dropdown-menu > li > a
+{
+    display:block;
+    color:#525252;
+    text-shadow:none;
+    font-weight:bold;
+    margin: 0px auto 8px auto;
+}
+.main-nav .navbar .nav .dropdown-menu > li > a:hover
+{
+    background-color: #e65c47;
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled=false); /*IE remove bootstrap filter */
+    color:#FFF;
+    text-shadow:none;
+}
+div.navbar-inner .collapse.in
+{
+    background-color: inherit;
+    border: none;
+    margin: inherit;
+    border-radius: 3px;
+    text-align: left;
+    /*padding: 10px 10px 0;*/
+}
+button.btn-navbar
+{
+    float:left !important;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle
+{
+    background-color: #e65c47;
+    color:#fff !important;
+}
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover
+{
+    background-color: transparent;
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled=false); /*IE remove bootstrap filter */
+    color:#fff;
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover
+{
+    color: #7c858c;
+    background-color:transparent;
+    box-shadow:none;
+}
+.navbar-inner
+{
+    z-index:2;
+}
+.navbar-inner.demo-nav
+{
+    border-radius: 0;
+    box-shadow: none;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    margin-top: 0;
+}
+.navbar .btn-navbar
+{
+    background-image: -webkit-gradient(linear, center top, 0, center center, 141, from(#66ccdd), to(#00859b) ); /* old WebKit Syntax */
+    background-image: -webkit-linear-gradient( top , #66ccdd 0%, #00859b 100%); /* New WebKit syntax */
+    background-image: -moz-linear-gradient(center top , #66ccdd, #00859b);
+    background-image: -ms-linear-gradient(center top , #66ccdd 0%, #00859b 100%); /* IE10+ */
+    background-image: -o-linear-gradient(center top , #66ccdd, #00859b); /* Opera (13?) */
+    background-color: #66ccdd;
+    box-shadow:none;
+    border:none;
+}
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar .active,
+.navbar .btn-navbar .disabled,
+.navbar .btn-navbar[disabled]
+{
+    background-color: #00859b;
+    background-position: 0px -15px;
+    transition: background-position 0.1s linear 0s;
+}
+.btn-small
+{
+    font-size:13px;
+    padding: 4px 10px 8px;
+}
+.spacer
+{
+    height:40px;
+}
+
+/* Sections
+-------------------------------------------------- */
+
+/* padding for in-page bookmarks and fixed navbar */
+section > .page-header,
+section > .lead
+{
+    color: #5a5a5a;
+}
+section > ul li
+{
+    margin-bottom: 5px;
+}
+
+/* Separators (hr) */
+/*.bs-docs-separator*/
+/*{*/
+    /*margin: 40px 0 39px;*/
+/*}*/
+
+hr.no-margin
+{
+    margin: 0;
+}
+/* HOME PAGE UPLOADER BAR -------
+ ------------------------------*/
+div.progress
+{
+    width: 50%;
+    margin: 50px auto 0;
+    height: 40px;
+    display: none;
+}
+
+#progress {
+    height: 40px;
+    background: #444;
+    bottom: 0;
+    z-index: 1;
+}
+/* ----------------------------*/
+
+.features-section
+ {
+     background: transparent;
+     background-color: #f5f5f5;
+     /*border-top: 1px solid #ddd;*/
+     border-bottom: 1px solid #ddd;
+     text-align: left !important;
+     padding-bottom: 130px;
+     z-index: 2;
+     box-shadow: 0 -1px 0px 0px #DDDDDD,
+     0 -2px 0px 1px #FFFFFF,
+     0 -1px 0px 3px #DDDDDD;
+
+ }
+.about-home
+{
+    padding: 100px 0 200px;
+    width: 100%;
+    background-color: #e65c47;
+    position: relative;
+    z-index: 3;
+}
+.about-home a
+{
+    color: #FFEEAA;
+
+}
+section.support
+{
+    z-index: 1;
+    width: 100%;
+}
+section.orange-bg
+{
+    margin-top: 20px;
+    background-color: #e65c47;
+    color: #fff;
+    box-shadow: 0 -1px 0px 0px #DDDDDD,
+    0 -2px 0px 1px #FFFFFF,
+    0 -1px 0px 3px #DDDDDD;
+}
+section.grey
+{
+    padding-top: 10px;
+    background: transparent;
+    background-color: #f5f5f5;
+    box-shadow: 0 -1px 0px 0px #DDDDDD,
+    0 -2px 0px 1px #FFFFFF,
+    0 -1px 0px 3px #DDDDDD;
+}
+section.web-marketing
+{
+    z-index: 4;
+    position: relative;
+    width: 100%;
+    background-color: #fcfcfa;
+}
+
+@media (max-width: 899px)
+{
+    section.features-section,
+    section.about-home,
+    section.grey,
+    section.web-marketing
+    {
+        margin-top: 0 !important;
+        padding: 20px 0;
+    }
+    div.progress
+    {
+        margin: 20px auto;
+    }
+}
+
+/* BUTTONS -------------------
+----------------------------*/
+.btn
+{
+    background-image: -moz-linear-gradient(center top , #f88d5a, #e65c47);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f88d5a), to(#e65c47));
+    background-image: -webkit-linear-gradient(top, #f88d5a, #e65c47);
+    background-image: -ms-linear-gradient(top, #f88d5a, #e65c47);
+    color:#fff;
+    text-shadow:none;
+}
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled]
+{
+    background-color: #e65c47;
+    color:#fff;
+}
+.btn a:hover
+{
+    color:#fff;
+}
+.bootstrap-demo-button:hover
+{
+    background-color: #f87436;
+    background-image: -webkit-linear-gradient(top, #f87436, #f87436);
+    background-image: -moz-linear-gradient(top, #f87436, #f87436)
+
+}
+/*------------------------------*/
+
+.jumbotron-small
+{
+    z-index: 1000;
+    padding: 0px 0;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+    border: 1px solid #777777;
+    background: #66ccdd;  /* fallback for non-supporting browsers */
+    background-color: #00abc7;
+    /*background-image: -webkit-gradient(radial, 33% 25px, 0, center center, 141, from(#ddf3f7), to(#00abc7) ); *//* old WebKit Syntax */
+    /*background-image: -webkit-radial-gradient(33% 25px, circle contain, #ddf3f7 0%, #00abc7 3000%); *//* New WebKit syntax */
+    /*background-image: -moz-radial-gradient(33% 25px, circle contain, #ddf3f7 0%, #00abc7 3000%);*/
+    /*background-image: -ms-radial-gradient(33% 25px, circle contain, #ddf3f7 0%, #00abc7 3000%); *//* IE10+ */
+    /*background-image: -o-radial-gradient(33% 25px, circle contain, #ddf3f7 0%, #00abc7 3000%); *//* Opera (13?) */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D1F8FF', endColorstr='#00859b',GradientType=0 );*/
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.jumbotron-small a
+{
+    color: #fff;
+    color: rgba(255,255,255,.5);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.btn-large
+{
+    font-size: 24px;
+}
+/*.legend*/
+/*{*/
+    /*display: none;*/
+/*}*/
+
+/* DEMOS
+-------------------------------------------------- */
+.marketing.demo-list
+{
+    text-align: left;
+    color: #525252;
+}
+.marketing.demo-list h1
+{
+    margin-top: 20px;
+}
+
+.demo-subnav
+{
+    margin-top: 16px;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 30px;
+}
+.demo-list .demo-title
+{
+    margin-bottom: 20px;
+    padding-top:100px;
+    margin-top: -100px;
+}
+section.demo-section
+{
+    margin-bottom: 40px;
+    padding-top:60px;
+    margin-top: -60px;
+}
+.view-code
+{
+    margin: 30px 0 0;
+}
+.view-code a
+{
+    cursor: pointer;
+    font-size: 16px;
+}
+div.source-view
+{
+    margin-top: -3px;
+    display: none;
+}
+pre.source-view
+{
+    margin-top: -3px;
+    display: none;
+}
+i.icon-eye-open
+{
+    opacity: 0.8;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.marketing p.demo-description
+{
+    font-size: 17.5px;
+    margin-bottom: 30px;
+}
+.code-tab
+{
+    display: inline;
+    padding: 10px;
+    background-color: #525252;
+    color: #FFFFFF;
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    top: 1px;
+}
+.code-tab.activeTabTrigger
+{
+    background-color: #F4F4F4;
+    color: #525252;
+    font-weight: 400;
+    z-index: 2;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+}
+.code-example .code-window
+{
+    display: none;
+    margin-top: 8px;
+}
+.code-example
+{
+    margin-top: 20px;
+}
+.code-example .code-window.active
+{
+    z-index: 1;
+    padding: 0 10px;
+    display: block;
+    background-color: #F4F4F4;
+}
+
+/* marketing section of Overview
+-------------------------------------------------- */
+
+body.home .marketing
+{
+    text-align: center;
+}
+.marketing
+{
+    color: #525252;
+}
+.marketing h1
+{
+    margin: 30px 0 12px 0px;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #00abc7;
+    text-align: center;
+}
+.marketing h2
+{
+    font-weight: 200;
+    margin-bottom: 5px;
+    color: #00abc7;
+    font-size: 36px;
+}
+.marketing h3
+{
+    font-weight:300;
+    font-size: 24px;
+    line-height: 28px;
+    color: #00abc7;
+}
+.marketing h4
+{
+    color: #e65c47;
+}
+.marketing p
+{
+    font-size: 14px;
+    line-height: 1.3;
+}
+.marketing .marketing-byline
+{
+    font-size: 17.5px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #525252;
+    margin: 10px 0;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.footer
+{
+    padding: 70px 0;
+    border-top: 1px solid #e5e5e5;
+    background-color: #525252;
+    color :#eee;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+}
+.footer p
+{
+    margin-bottom: 0;
+    color: #eee;
+}
+.footer-links
+{
+    margin: 10px 0;
+}
+.footer-links li
+{
+    display: inline;
+    margin-right: 10px;
+}
+.footer a
+{
+    color: #66ccdd;
+}
+.widenIcon
+{
+    margin: -3px 0px 0px 4px;
+}
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+    .container
+    {
+        max-width: 1024px;
+    }
+}
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+    /* Remove any padding from the body */
+    body {
+        padding-top: 0;
+    }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+    /* Remove any padding from the body */
+    body {
+        padding-top: 0;
+    }
+    .marketing .span4 {
+        margin-bottom: 40px;
+    }
+
+    /* Space out the show-grid examples */
+    .show-grid [class*="span"] {
+        margin-bottom: 5px;
+    }
+
+    /* Unfloat the back to top link in footer */
+    .footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer p {
+        margin-bottom: 9px;
+    }
+    .terms-conditions-copy
+    {
+        width:100% !important;
+    }
+    .license-holder-div
+    {
+        border: none !important;
+    }
+    .team-image
+    {
+        margin-left: 0px !important;
+    }
+    .team ul
+    {
+        text-align:left;
+    }
+    .spacer
+    {
+        height:20px;
+    }
+    .jumbotron-small
+    {
+        left: 0;
+    }
+    .marketing-text
+    {
+        padding-left: 0 !important;
+    }
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+    /* Remove padding above jumbotron */
+    body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* Change up some type stuff */
+    h2 small {
+        display: block;
+    }
+
+    /* Marketing on home */
+    .marketing h1 {
+        font-size: 40px;
+        color: #00abc7;
+    }
+
+    /* Do our best to make tables work in narrow viewports */
+    table code {
+        white-space: nowrap;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    /* Modal example */
+    .modal-example .modal {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+    /* Unfloat the back to top in footer to prevent odd text wrapping */
+    .footer .pull-right {
+        float: none;
+    }
+    .footer
+    {
+        position: relative;
+        padding-bottom: 100px;
+    }
+    .terms-conditions-copy
+    {
+        width:100% !important;
+        text-align:left !important;
+    }
+}
+@media (max-width: 550px) {
+    .terms-conditions-copy
+    {
+        text-align:left !important;
+    }
+}
+
+/* Fine Uploader
+-------------------------------------------------- */
+/* For the bootstrapped demos */
+li.alert-success
+{
+    background-color: #DFF0D8;
+}
+li.alert-error
+{
+    background-color: #F2DEDE;
+}
+.alert-error .qq-upload-failed-text
+{
+    display: inline;
+}
+UL.features LI IMG
+{
+    display: inline;
+    margin: 0px;
+    padding-right: 5px;
+}
+
+/* DOWNLOADS PAGE
+----------------------*/
+input, button, select, textarea
+{
+    font-family: 'Maven Pro', sans-serif;
+}
+
+/* Terms and Conditions
+-----------------------------*/
+.terms-conditions-copy
+{
+    width:70%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: justify;
+}
+.terms-conditions-copy h1
+{
+    text-align: center;
+    color: #00ABC7;
+}
+.terms-conditions-copy h4
+{
+    text-align:left;
+    color: #444;
+}
+.terms-conditions-copy ol
+{
+    list-style: decimal;
+}
+.terms-conditions-copy  p
+{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.uppercase-bold
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #444;
+}
+.uppercase
+{
+    text-transform: uppercase;
+}
+
+/* About */
+.about-nav
+{
+    margin-top:50px;
+    margin-right:15px;
+}
+.team-image
+{
+    border-radius:4px;
+    margin:20px auto !important;
+}
+.team ul
+{
+    list-style: none;
+    margin-left:0px;
+    text-align:center;
+}
+
+/* Global
+---------------------------*/
+.orange
+{
+    color: #e65c47 !important;
+}
+.white
+{
+    color: #ffffff !important;
+}
+.p8
+{
+    padding:0px 20px 10px 20px;
+}
+.pb40
+{
+    padding-bottom: 40px;
+}
+.left
+{
+    float: left !important;
+}
+.right
+{
+    float: right !important;
+}
+.center
+{
+    text-align: center;
+}
+pre
+{
+    border: none;
+    background-color: inherit;
+    margin-top: -15px;
+    padding: 0;
+    border-top-left-radius: 0px;
+    border: 1px solid #999;
+}
+
+pre code
+{
+    overflow-x: auto;
+    word-wrap: normal !important;
+    white-space: pre !important;
+}
+
+pre code.example .javascript, pre code.example .css
+{
+    opacity: 1;
+}
+
+code.example
+{
+    max-height: 700px;
+}
+.strike {
+    text-decoration: line-through;
+}
+
+section.question {
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: larger;
+}
+section.question::before {
+    font-size: larger;
+    font-weight: bold;
+}
+
+section.answer {
+    padding-top: 7px;
+}
+section.answer::before {
+
+}
+
+/* Features
+------------------------*/
+.featurette
+{
+    margin-bottom: 0px;
+}
+.accordion
+{
+    text-align: left;
+}
+.accordion-group
+{
+    border: none;
+}
+.accordion-group.main-features a
+{
+    font-size: 17px;
+}
+.accordion-group.main-features .accordion-heading-features
+{
+    margin: 6px;
+}
+.accordion-inner-faq
+{
+    text-align: left;
+}
+.accordion-toggle-faq.collapsed
+{
+    font-size: 16px !important;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.accordion-toggle-faq
+{
+    font-size: 18px !important;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.collapse.in
+{
+    background-color: #FCFCFA;
+    border: 1px solid #e65c47;
+    margin:5px 0;
+    border-radius: 3px;
+    /*padding: 10px 10px 0;*/
+}
+.collapse.in p
+{
+   margin: 10px;
+}
+.fu-avatar-white
+{
+    background-image: url('/img/fineuploader-avatar-white.png');
+    height:25px;
+    max-width: 420px;
+    margin-bottom: 30px;
+}
+
+/* BOOTSTRAP OVERRIDE ---------
+-----------------------------*/
+
+.hero-unit {
+    line-height: 0px;
+    font-size: 14px;
+    padding: 20px 30px;
+    background-color: #f5f5f5;
+    box-shadow: 0 -1px 0px 0px #DDDDDD,
+    0 -2px 0px 1px #FFFFFF,
+    0 -1px 0px 2px #DDDDDD;
+}
+
+
+
+
+
+
+
+
+
+
+
